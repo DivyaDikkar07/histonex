@@ -205,7 +205,7 @@ export default function HeritageMap() {
             {filteredPlaces.map(place => (
               <div 
                 key={place.id}
-                ref={el => cardRefs.current[place.id] = el}
+                ref={el => { cardRefs.current[place.id] = el; }}
                 onClick={() => setSelectedPlace(place.id)}
                 className={`bg-white/5 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 group ${
                   selectedPlace === place.id 
