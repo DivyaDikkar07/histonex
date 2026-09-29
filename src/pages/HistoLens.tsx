@@ -17,15 +17,14 @@ export default function HistoLens() {
   
   const [isCameraActive, setIsCameraActive] = useState(false);
   const [timelineYear, setTimelineYear] = useState(2026);
-  const [isInitializing, setIsInitializing] = useState(true);
   
   const fileInputRef = useRef<HTMLInputElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    // Initialize AI engine on mount
-    mlEngine.initialize().then(() => setIsInitializing(false));
+    // Initialize AI engine on mount in background
+    mlEngine.initialize();
     return () => stopCamera();
   }, []);
 
@@ -49,7 +48,7 @@ export default function HistoLens() {
   };
 
   const captureAndScan = async () => {
-    if (videoRef.current && canvasRef.current && !isInitializing) {
+    if (videoRef.current && canvasRef.current) {
       const video = videoRef.current;
       const canvas = canvasRef.current;
       canvas.width = video.videoWidth;
@@ -76,7 +75,7 @@ export default function HistoLens() {
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file && !isInitializing) {
+    if (file) {
       const reader = new FileReader();
       reader.onloadend = async () => {
         const result = reader.result as string;
@@ -214,14 +213,12 @@ export default function HistoLens() {
                 className="hidden" 
                 accept="image/*"
                 onChange={handleFileUpload}
-                disabled={isInitializing}
               />
               
               <div className="flex flex-col w-full gap-4">
                 <button 
                   onClick={startCamera}
-                  disabled={isInitializing}
-                  className="w-full py-4 bg-heritage-orange hover:bg-orange-600 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-4 bg-heritage-orange hover:bg-orange-600 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
                 >
                   <Camera className="w-5 h-5" />
                   {t('common.openCamera')}
@@ -235,20 +232,12 @@ export default function HistoLens() {
 
                 <button 
                   onClick={() => fileInputRef.current?.click()}
-                  disabled={isInitializing}
-                  className="w-full py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95 border border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95 border border-white/20"
                 >
                   <Upload className="w-5 h-5" />
                   {t('common.uploadImage')}
                 </button>
               </div>
-              
-              {isInitializing && (
-                <div className="mt-2 flex items-center justify-center gap-3 text-heritage-orange font-medium text-sm">
-                  <div className="w-4 h-4 border-2 border-heritage-orange/30 border-t-heritage-orange rounded-full animate-spin" />
-                  {t('common.warmingUp')}
-                </div>
-              )}
             </div>
           </motion.div>
         )}
