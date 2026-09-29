@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #071A2F;
+  --color-royal-blue: #123B63;
+  --color-heritage-orange: #D96B27;
+  --color-warm-gold: #C99A45;
+  --color-cream: #F7F1E5;
+  --color-success-green: #2E8B57;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply bg-deep-navy text-cream font-sans antialiased selection:bg-heritage-orange selection:text-white;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .glass-panel-dark {
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-warm-gold to-heritage-orange;
+  }
+}

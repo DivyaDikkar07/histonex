@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "map": "Map",
+    "HistoLens": "HistoLens",
+    "photoChallenge": "Photo Challenge",
+    "community": "Community",
+    "login": "Login",
+    "profile": "Profile"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "unknownHeritage": "Unknown Heritage Place",
+    "unknownHeritageDesc": "Please try another photo of the 6 main heritage sites.",
+    "scanAnother": "Scan Another Image",
+    "openCamera": "Open Camera",
+    "uploadImage": "Upload Heritage Image",
+    "warmingUp": "Warming up AI Model...",
+    "confidence": "Confidence",
+    "viewHeritage": "View Heritage",
+    "pastVsPresent": "Past vs Present",
+    "past": "Past",
+    "present": "Present",
+    "explore3d": "Explore 3D",
+    "thenVsNow": "Then vs Now",
+    "viewOnMap": "View on Map",
+    "timeTravelTimeline": "Time Travel Timeline",
+    "histoScanResult": "HistoScan Result",
+    "year": "Year"
+  },
+  "chatbot": {
+    "title": "Heritage Guide",
+    "subtitle": "Ask history. Hear its story.",
+    "askPrompt": "Ask history a question...",
+    "suggest1": "When were the Ajanta Caves created?",
+    "suggest2": "Why is this place important?",
+    "suggest3": "Tell me a story in my language.",
+    "greeting": "Namaste! I am your Heritage Guide.",
+    "learning": "I am still learning about this.",
+    "verified": "Verified",
+    "unverified": "Unverified"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "map": "Map",
+    "HistoLens": "HistoLens",
+    "photoChallenge": "Photo Challenge",
+    "community": "Community",
+    "login": "Login / Register",
+    "profile": "Profile / Admin"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "unknownHeritage": "Unknown / Not one of the 6 heritage places",
+    "unknownHeritageDesc": "Our AI model is currently trained exclusively on Ajanta Caves, Ellora Caves, Raigad Fort, Shaniwar Wada, Hampi, and Konark Sun Temple. Please try another photo.",
+    "scanAnother": "Scan Another Image",
+    "openCamera": "Open Camera",
+    "uploadImage": "Upload Heritage Image",
+    "warmingUp": "Warming up AI Model...",
+    "confidence": "AI Confidence",
+    "viewHeritage": "View Heritage Details",
+    "pastVsPresent": "Past vs Present",
+    "past": "Past",
+    "present": "Present",
+    "explore3d": "Explore 3D",
+    "thenVsNow": "Then vs Now",
+    "viewOnMap": "View on Map",
+    "timeTravelTimeline": "Time Travel Timeline",
+    "histoScanResult": "HistoScan Result",
+    "year": "Year"
+  },
+  "chatbot": {
+    "title": "Heritage Guide",
+    "subtitle": "Ask history. Hear its story.",
+    "askPrompt": "Ask history a question...",
+    "suggest1": "When were the Ajanta Caves created?",
+    "suggest2": "Why is this place important?",
+    "suggest3": "Tell me a story in my language.",
+    "greeting": "Namaste! I am your Heritage Guide. I can answer your questions about the heritage sites using our verified knowledge base. What would you like to know?",
+    "learning": "I'm still learning about that, but according to records, these heritage sites are known for their stunning history and architecture.",
+    "verified": "Verified heritage record",
+    "unverified": "Requires verification"
+  },
+  "heritage": {
+    "ajanta-caves": {
+      "name": "Ajanta Caves",
+      "location": "Chhatrapati Sambhajinagar, Maharashtra",
+      "description": "A series of 30 rock-cut Buddhist cave monuments dating from the 2nd century BCE to about 480 CE."
+    }
+  }
+}
